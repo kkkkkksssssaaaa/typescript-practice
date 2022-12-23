@@ -1,0 +1,12 @@
+{
+  "name": "typescript-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/kkkkkksssssaaaa/typescript-practice.git",
+  "author": "kkkkkksssssaaaa <kofc312@naver.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

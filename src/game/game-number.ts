@@ -5,10 +5,14 @@ export class GameNumber {
 
   private readonly value: Number;
 
-  constructor(value: Number) {
+  private constructor(value: Number) {
     this.checkRange(value);
 
     this.value = value;
+  }
+
+  public static of(value: Number): GameNumber {
+    return new GameNumber(value);
   }
 
   get(): Number {

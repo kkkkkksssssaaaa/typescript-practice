@@ -1,7 +1,6 @@
-export class GameNumber {
+import { Numbers } from '../common/numbers';
 
-  private static readonly MIN: Number = 1;
-  private static readonly MAX: Number = 9;
+export class GameNumber {
 
   private readonly value: Number;
 
@@ -15,16 +14,12 @@ export class GameNumber {
     return new GameNumber(value);
   }
 
-  get(): Number {
+  public get(): Number {
     return this.value;
   }
 
   private checkRange(value: Number): void {
-    if (value > GameNumber.MAX) {
-      throw new Error();
-    }
-
-    if (value < GameNumber.MIN) {
+    if (Numbers.isOverRange(value)) {
       throw new Error();
     }
   }

@@ -1,7 +1,7 @@
 import { GameNumber } from '../../src/game/game-number';
 
 describe('game-number', () => {
-  test('범위 내에 속하는 값으로 인자로 보내 초기화할 수 있다', async () => {
+  test('범위 내에 속하는 값을 인자로 보내 초기화할 수 있다', async () => {
     await expect(() => GameNumber.of(5)).not.toThrow();
   });
 

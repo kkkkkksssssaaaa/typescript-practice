@@ -21,3 +21,21 @@ describe('numbers.isMoreThanMax', () => {
     await expect(Numbers.isMoreThanMax(10)).toEqual(true);
   });
 });
+
+describe('numbers.isLessThanMin', () => {
+  test('1을 인자로 넘기면 false 를 반환한다', async () => {
+    await expect(Numbers.isLessThanMin(1)).toEqual(false);
+  });
+
+  test('최소값보다 큰 수를 인자로 넘기면 false 를 반환한다', async () => {
+    await expect(Numbers.isLessThanMin(5)).toEqual(false);
+  });
+
+  test('0을 인자로 넘기면 true 를 반환한다', async () => {
+    await expect(Numbers.isLessThanMin(0)).toEqual(true);
+  });
+
+  test('음수를 인자로 넘기면 true 를 반환한다', async () => {
+    await expect(Numbers.isLessThanMin(-1)).toEqual(true);
+  });
+});

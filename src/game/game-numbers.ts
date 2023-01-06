@@ -21,8 +21,18 @@ export class GameNumbers {
   }
 
   private checkLength(values: GameNumber[]): void {
-    if (values.length !== 3) {
+    if (this.toSet(values).size !== GameNumbers.LENGTH) {
       throw new Error();
     }
+  }
+
+  private toSet(values: GameNumber[]): Set<Number> {
+    const convertToSet: Set<Number> = new Set<Number>();
+
+    values.forEach(value => {
+      convertToSet.add(value.get());
+    });
+
+    return convertToSet;
   }
 }

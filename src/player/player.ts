@@ -1,4 +1,5 @@
-import { GameNumbers } from './game-numbers';
+import { GameNumbers } from '../game/game-numbers';
+
 export class Player {
 
   private readonly playersNumber: GameNumbers;

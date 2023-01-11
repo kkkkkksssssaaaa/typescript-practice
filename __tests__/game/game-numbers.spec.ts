@@ -1,4 +1,3 @@
-import { GameNumber } from "../../src/game/game-number";
 import { GameNumbers } from "../../src/game/game-numbers"
 
 describe('game-numbers', () => {

@@ -18,6 +18,10 @@ export class GameNumber {
     return this.value;
   }
 
+  public equals(target: GameNumber): boolean {
+    return this.value === target.get();
+  }
+
   private checkRange(value: number): void {
     if (Numbers.isOverRange(value)) {
       throw new Error();

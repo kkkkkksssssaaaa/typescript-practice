@@ -31,3 +31,15 @@ describe('game-number.get()', () => {
     await expect(GameNumber.of(1).get()).toBe(1);
   });
 });
+
+describe('game-number.equals()', () => {
+  test('같은 숫자로 초화한 객체라면 true 를 반환환다', async () => {
+    const compareTarget: GameNumber = GameNumber.of(1);
+    await expect(compareTarget.equals(GameNumber.of(1))).toBeTruthy();
+  });
+
+  test('다른 숫자로 초화한 객체는 false 를 반환환다', async () => {
+    const compareTarget: GameNumber = GameNumber.of(1);
+    await expect(compareTarget.equals(GameNumber.of(2))).toBeFalsy();
+  });
+});

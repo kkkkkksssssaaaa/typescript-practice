@@ -24,6 +24,14 @@ export class GameNumbers {
     return this.values[index].get();
   }
 
+  public equals(values: GameNumbers): boolean {
+    for (let i: number = 0; i < GameNumbers.LENGTH; i++) {
+      this.comapreOrThrow(this.toArray()[i], values.toArray()[i]);
+    }
+
+    return true;
+  }
+
   private checkLength(values: number[]): void {
     if (this.toSet(values).size !== GameNumbers.LENGTH) {
       throw new Error();

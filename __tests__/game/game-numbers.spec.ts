@@ -24,3 +24,15 @@ describe('game-numbers.toArray', () => {
     expect(gameNumbers.getOne(2)).toBe(3);
   });
 });
+
+describe('game-numbers.equals', () => {
+  test('같은 배열로 초기화한 객체라면 true 를 반환한다', () => {
+    const leftNumbersArray: number[] = [1, 2, 3];
+    const leftNumbers: GameNumbers = GameNumbers.of(leftNumbersArray);
+
+    const rightNumbersArray: number[] = [1, 2, 3];
+    const rightNumbers: GameNumbers = GameNumbers.of(rightNumbersArray);
+
+    expect(leftNumbers.equals(rightNumbers)).toBe(true);
+  });
+});

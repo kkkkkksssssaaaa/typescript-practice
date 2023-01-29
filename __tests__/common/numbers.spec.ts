@@ -39,3 +39,18 @@ describe('numbers.isLessThanMin', () => {
     await expect(Numbers.isLessThanMin(-1)).toEqual(true);
   });
 });
+
+describe('numbers.getRandomOne', () => {
+  const runningCount: number = 100;
+
+  test('1부터 9까지의 랜덤한 숫자를 얻을 수 있다', async () => {
+    await expect(() => Numbers.getRandomOne()).not.toThrow();
+  });
+
+  test('호출로 얻은 함수는 1보다 크다', async () => {
+    for (let i: number = 0; i < runningCount; i++) {
+      let randomOne = Numbers.getRandomOne();
+      await expect(Numbers.isLessThanMin(randomOne)).toBeFalsy();
+    }
+  })
+});

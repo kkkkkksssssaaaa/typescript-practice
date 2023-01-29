@@ -17,4 +17,8 @@ export class Numbers {
     return Numbers.isMoreThanMax(value) 
       || Numbers.isLessThanMin(value);
   }
+
+  public static getRandomOne(): number {
+     return Math.random() * (this.MAX - this.MIN) + this.MIN;
+  }
 }

@@ -26,7 +26,7 @@ export class GameNumbers {
 
   public equals(values: GameNumbers): boolean {
     for (let i: number = 0; i < GameNumbers.LENGTH; i++) {
-      this.comapreOrThrow(this.toArray()[i], values.toArray()[i]);
+      this.equal(this.toArray()[i], values.toArray()[i]);
     }
 
     return true;
@@ -56,5 +56,9 @@ export class GameNumbers {
     });
 
     return convertToArray;
+  }
+
+  private equal(left: GameNumber, right: GameNumber): boolean {
+    return !left.equals(right);
   }
 }

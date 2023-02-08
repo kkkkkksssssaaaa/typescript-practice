@@ -5,15 +5,15 @@ export class Numbers {
 
   private constructor() { }
 
-  public static isMoreThanMax(value: number): Boolean {
+  public static isMoreThanMax(value: number): boolean {
     return value > Numbers.MAX;
   }
 
-  public static isLessThanMin(value: number): Boolean {
+  public static isLessThanMin(value: number): boolean {
     return value < Numbers.MIN;
   }
 
-  public static isOverRange(value: number): Boolean {
+  public static isOverRange(value: number): boolean {
     return Numbers.isMoreThanMax(value) 
       || Numbers.isLessThanMin(value);
   }
